@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS despachante.licenciamento(
     cd_veiculo VARCHAR(17) NOT NULL,
     dt_licenciamento DATE NOT NULL,
     vl_licenciamento MONEY NOT NULL,
-    PRIMARY KEY (cd_veiculo, dt_licenciamento),
     FOREIGN KEY (cd_veiculo) REFERENCES
-                    despachante.veiculo(cd_veiculo)
+                    despachante.veiculo(cd_veiculo),
+    PRIMARY KEY (cd_veiculo, dt_licenciamento)
 );
